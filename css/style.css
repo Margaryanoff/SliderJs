@@ -1,0 +1,85 @@
+@import url(./Reset.css);
+
+body{
+    background: linear-gradient( to right,blue 10%,gray 20%,blue, gray 80%, blue 90%);
+}
+
+section {
+    position: relative;
+    margin: 30px 0;
+    transition: 0.3s;
+    #cards{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        z-index: 999999999 !important;
+        span{
+            width: 40px;
+            border-radius: 10px;
+            height: 10px;
+            border: 1px solid white;
+            transition: .2s;
+            cursor: pointer;
+            &:hover{
+                scale: 1.2;
+                transition: .2s;
+            }
+        }
+    }
+    .mainDiv{
+        position: relative;
+    }
+    img {
+        max-width: 100%;
+    }
+    
+    .slider__wrapper {
+        overflow: hidden;
+    }
+    .slides {
+        display: flex;
+        transition: .4s;
+        
+    }
+    .slides > div {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    #leftArrow {
+        position: absolute;
+        z-index: 999999;
+        font-size: 50px;
+        color: white;
+        top: 50%;
+        border-right: 1px solid transparent;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            border-right: 1px solid white;
+            scale: 1.2;
+            transition: 0.2s;
+        }
+    }
+    #rightArrow {
+        position: absolute;
+        font-size: 100px;
+        z-index: 999999;
+        font-size: 50px;
+        color: white;
+        top: 50%;
+        right: 0;
+        border-left: 1px solid transparent;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            border-left: 1px solid white;
+            scale: 1.2;
+            transition: 0.2s;
+        }
+    }
+}
+.button_active{
+    background: white;
+    box-shadow: 0 0 5px white;
+}
